@@ -1,0 +1,124 @@
+.button{
+  cursor: pointer;
+}
+
+.button:hover{
+  border: 1px solid black;
+  transform: scale(1.15);
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
+  transition: 0.2s;
+}
+
+.button:active{
+  position: relative;
+  top: 1px;
+}
+
+.container-evolution-details{
+  margin-top: 25px;
+  width: 100%;
+  justify-content: center;
+}
+
+.container-pokemons{
+  width: 18%;
+}
+
+.container-arrows{
+  width: 8%;
+}
+
+.container-img {
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.container-arrow{
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+picture {
+  width: 100%;
+}
+
+img{
+  padding: 5px;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* case don't have evolutions */
+
+.noEvolutions-container{
+  justify-content: center;
+}
+
+.noEvolutions-title{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  align-items: center;
+}
+
+
+/* case more them 2 evolutions */
+.case3-containerFirstPokemon{
+  width: 20%;
+}
+
+.case3-containerFirstPokemon-img{
+  border-radius: 50%;
+}
+
+.case3-containerArrow{
+  width: 10%;
+}
+
+.case3-containerArrow-img{
+  width: 100%;
+}
+
+.case3-containerEvolutions{
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 65%;
+}
+
+.case3-containerEvolutions-img{
+  width: 30%;
+  margin: 2px;
+  border-radius: 50%;
+}
+
+/* case more them 8 evolutions */
+.case8-containerFirstPokemon{
+  width: 20%;
+}
+
+.case8-containerFirstPokemon-img{
+  border-radius: 50%;
+}
+
+.case8-containerArrow{
+  width: 10%;
+}
+
+.case8-containerArrow-img{
+  width: 100%;
+}
+
+.case8-containerEvolutions{
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 65%;
+}
+
+.case8-containerEvolutions-img{
+  width: 20%;
+  margin: 2px;
+  border-radius: 50%;
+}

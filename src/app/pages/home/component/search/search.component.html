@@ -1,0 +1,6 @@
+<section class="container-search flex-row">
+  <input [(ngModel)]="pokemonName" *ngIf="isAliveSearch" type="search" placeholder="Digite o nome ou Id do pokemon" (keyup.enter)="search()">
+  <picture class="flex-row">
+    <img (click)="createSearch()" src="../../../../../assets/images/search.png" alt="Botão de busca">
+  </picture>
+</section>

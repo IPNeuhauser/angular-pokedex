@@ -1,9 +1,11 @@
 {
-  "name": "pokedex-angular",
+  "name": "angular-pokedex",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "build:prod": "ng build --configuration production --base-href https://ipneuhauser.github.io/angular-pokedex/",
+    "test:headless": "ng test --watch=false --browsers=ChromeHeadless",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

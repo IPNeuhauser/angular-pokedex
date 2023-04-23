@@ -1,0 +1,9 @@
+<section class="container-movesDetails flex-row">
+  <img src="../../../../../assets/images/back.png" alt="Botão voltar moves" (click)="previousMoves()">
+  <article class="container-moves flex-row">
+    <div *ngFor="let element of moves" class="move {{element.type.name}}">
+      <p>{{element.name}}</p>
+    </div>
+  </article>
+  <img src="../../../../../assets/images/next.png" alt="Botão próximo" (click)="nextMoves()">
+</section>

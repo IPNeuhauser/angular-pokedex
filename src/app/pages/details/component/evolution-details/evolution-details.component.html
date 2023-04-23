@@ -1,0 +1,125 @@
+<section class="">
+  <div ngSwitch="{{templateEvos}}">
+
+    <!-- case 0 -->
+    <div *ngSwitchCase="'0'" class="container-evolution-details flex-row">
+      <div class="noEvolutions-container flex-row">
+        <h1 class="noEvolutions-title">This pokemon don't have evolutions</h1>
+      </div>
+    </div>
+
+    <!-- case 2 -->
+    <div *ngSwitchCase="'2'" class="container-evolution-details flex-row">
+      <div class="flex-column container-pokemons">
+        <div *ngFor="let inicial of pokemons.inicialForm" class="button container-img {{type}}" (click)="changePokemon(inicial.id)">
+          <picture>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{inicial.id}}.png" alt="imagem do pokemon {{inicial.name}}">
+          </picture>
+        </div>
+      </div>
+       <div class="flex-column container-arrows">
+        <div *ngFor="let firstEvolution of pokemons.firstEvolution" class="container-arrow">
+          <picture>
+            <img src="../../../../../assets/images/arrow_right.png" alt="arrow">
+          </picture>
+        </div>
+      </div>
+      <div class="flex-column container-pokemons">
+        <div *ngFor="let firstEvolution of pokemons.firstEvolution" class="button container-img {{type}}" (click)="changePokemon(firstEvolution.id)">
+          <picture>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{firstEvolution.id}}.png" alt="imagem do pokemon {{firstEvolution.name}}">
+          </picture>
+        </div>
+      </div>
+    </div>
+
+    <!-- case 3 -->
+    <div *ngSwitchCase="'3'" class="container-evolution-details flex-row">
+      <div class="flex-column case3-containerFirstPokemon">
+        <div *ngFor="let inicial of pokemons.inicialForm" class="button case3-containerFirstPokemon-img {{type}}" (click)="changePokemon(inicial.id)">
+          <picture>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{inicial.id}}.png" alt="imagem do pokemon {{inicial.name}}">
+          </picture>
+        </div>
+      </div>
+       <div class="flex-column case3-containerArrow">
+        <div class="case3-containerArrow-img">
+          <picture>
+            <img src="../../../../../assets/images/arrow_right.png" alt="arrow">
+          </picture>
+        </div>
+      </div>
+      <div class="flex-row case3-containerEvolutions">
+        <div *ngFor="let firstEvolution of pokemons.firstEvolution" class="button case3-containerEvolutions-img {{type}}" (click)="changePokemon(firstEvolution.id)">
+          <picture>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{firstEvolution.id}}.png" alt="imagem do pokemon {{firstEvolution.name}}">
+          </picture>
+        </div>
+      </div>
+    </div>
+
+    <!-- case 8 -->
+    <div *ngSwitchCase="'8'" class="container-evolution-details flex-row">
+      <div class="flex-column case8-containerFirstPokemon">
+        <div *ngFor="let inicial of pokemons.inicialForm" class="button case8-containerFirstPokemon-img {{type}}" (click)="changePokemon(inicial.id)">
+          <picture>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{inicial.id}}.png" alt="imagem do pokemon {{inicial.name}}">
+          </picture>
+        </div>
+      </div>
+       <div class="flex-column case8-containerArrow">
+        <div class="case8-containerArrow-img">
+          <picture>
+            <img src="../../../../../assets/images/arrow_right.png" alt="arrow">
+          </picture>
+        </div>
+      </div>
+      <div class="flex-row case8-containerEvolutions">
+        <div *ngFor="let firstEvolution of pokemons.firstEvolution" class="button case8-containerEvolutions-img {{type}}" (click)="changePokemon(firstEvolution.id)">
+          <picture>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{firstEvolution.id}}.png" alt="imagem do pokemon {{firstEvolution.name}}">
+          </picture>
+        </div>
+      </div>
+    </div>
+
+    <!-- case Default -->
+    <div *ngSwitchDefault class="container-evolution-details flex-row">
+      <div class="flex-column container-pokemons ">
+        <div *ngFor="let inicial of pokemons.inicialForm" class="button container-img {{type}}" (click)="changePokemon(inicial.id)">
+          <picture>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{inicial.id}}.png" alt="imagem do pokemon {{inicial.name}}">
+          </picture>
+        </div>
+      </div>
+       <div class="flex-column container-arrows">
+        <div *ngFor="let firstEvolution of pokemons.firstEvolution" class="container-arrow">
+          <picture>
+            <img src="../../../../../assets/images/arrow_right.png" alt="arrow">
+          </picture>
+        </div>
+      </div>
+      <div class="flex-column container-pokemons ">
+        <div *ngFor="let firstEvolution of pokemons.firstEvolution" class="button container-img {{type}}" (click)="changePokemon(firstEvolution.id)">
+          <picture>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{firstEvolution.id}}.png" alt="imagem do pokemon {{firstEvolution.name}}">
+          </picture>
+        </div>
+      </div>
+      <div class="flex-column container-arrows">
+        <div *ngFor="let secondEvolution of pokemons.secondEvolution" class="container-arrow">
+          <picture>
+            <img src="../../../../../assets/images/arrow_right.png" alt="arrow">
+          </picture>
+        </div>
+      </div>
+      <div class="flex-column container-pokemons ">
+        <div *ngFor="let secondEvolution of pokemons.secondEvolution" class="button container-img {{type}}" (click)="changePokemon(secondEvolution.id)">
+          <picture>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{secondEvolution.id}}.png" alt="imagem do pokemon {{secondEvolution.name}}">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

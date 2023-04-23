@@ -1,0 +1,25 @@
+/* Ipads and tablets */
+@media screen and (min-width: 480px) {
+  .container-search picture {
+    width: 40px;
+  }
+
+  .container-search input{
+    max-width: 500px;
+    margin-right: 15px;
+    height: 40px;
+    border-radius: 25px;
+    font-size: 1.5rem;
+  }
+}
+
+/* Desktops and big screens */
+@media screen and (min-width: 1024px) {
+  .container-search picture {
+    width: 50px;
+  }
+
+  .container-search input{
+    text-indent: 18px;
+  }
+}

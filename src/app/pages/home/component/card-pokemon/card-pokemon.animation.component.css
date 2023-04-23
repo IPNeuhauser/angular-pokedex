@@ -1,0 +1,25 @@
+.flip-card:hover {
+	-webkit-animation: flip-vertical-fwd 0.3s cubic-bezier(.48, 0, 1, .38) 1 both;
+	        animation: flip-vertical-fwd 0.3s cubic-bezier(.48, 0, 1, .38) 1 both;
+}
+
+@-webkit-keyframes flip-vertical-fwd {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+@keyframes flip-vertical-fwd {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}

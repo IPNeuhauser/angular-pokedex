@@ -1,0 +1,16 @@
+<section class="container-card {{pokemon.type}} flip-card">
+  <header class="header-card flex-row">
+    <span class="nome-card">{{pokemon.name}}</span>
+    <span class="id-card">{{textId}}</span>
+  </header>
+  <main class="main-card flex-row">
+    <section class="types-card">
+      <ul class="flex-column">
+        <li *ngFor="let element of pokemon.types" class="{{element.type.name}} flex-row">{{element.type.name}}</li>
+      </ul>
+    </section>
+    <picture class="flex-row">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{pokemon.id}}.png" alt="imagem do pokemon {{pokemon.name}}">
+    </picture>
+  </main>
+</section>

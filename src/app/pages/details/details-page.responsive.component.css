@@ -1,0 +1,18 @@
+@media screen and (min-width: 480px) {
+  .container-details{
+    width: 100%;
+    max-width: 450px;
+  }
+
+  picture > img{
+    max-width: 175px;
+    transform: translateY(8%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container-details{
+    max-width: 450px;
+  }
+
+}

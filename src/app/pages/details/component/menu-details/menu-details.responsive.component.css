@@ -1,0 +1,5 @@
+@media screen and (min-width: 480px) {
+  .menu ul li{
+    font-size: 1rem;
+  }
+}

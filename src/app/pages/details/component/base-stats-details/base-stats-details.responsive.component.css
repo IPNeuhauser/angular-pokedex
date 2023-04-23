@@ -1,0 +1,10 @@
+@media screen and (min-width: 480px) {
+  .container-baseStats{
+    font-size: 1rem;
+  }
+
+  .title{
+    padding-left: 40px;
+  }
+}
+

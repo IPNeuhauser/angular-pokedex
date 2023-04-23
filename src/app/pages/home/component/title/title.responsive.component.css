@@ -1,0 +1,21 @@
+/* Ipads and tablets */
+@media screen and (min-width: 480px) {
+  .bg-title img{
+    max-width: 75px;
+  }
+
+  .bg-title h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Desktops and big screens */
+@media screen and (min-width: 1024px) {
+  .bg-title img{
+    max-width: 85px;
+  }
+
+  .bg-title h1 {
+    font-size: 4.5rem;
+  }
+}

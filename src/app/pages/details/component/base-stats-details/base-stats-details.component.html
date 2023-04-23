@@ -1,0 +1,11 @@
+<section class="container-baseStats">
+  <ul>
+    <li *ngFor="let element of pokemon.stats" class="flex-row">
+      <span class="title">{{element.stat.name | statsName}}</span>
+      <span class="value">{{element.base_stat}}</span>
+      <div class="container-space flex-row">
+        <div [ngClass]="chooseColor(element.base_stat)" class="percent" [ngStyle]="{'width.%': percent}"></div>
+      </div>
+    </li>
+  </ul>
+</section>

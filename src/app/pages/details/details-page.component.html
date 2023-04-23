@@ -1,0 +1,35 @@
+<div class="align-itens">
+  <section class="container-details {{type}}" [ngClass]="animation">
+    <header>
+      <app-details-nav (animation)="startDisable($event)"></app-details-nav>
+      <app-header-details
+        [pokemon]="pokemon"
+      ></app-header-details>
+    </header>
+    <picture>
+      <img class="translate" src="{{url}}" alt="imagem do pokemon {{pokemon.name}}">
+    </picture>
+    <main>
+      <div class="shadow-details"></div>
+      <app-menu-details (click)="changeMenu()"></app-menu-details>
+
+      <div ngSwitch="{{menuOption}}">
+        <app-about-details *ngSwitchCase="'About'"
+          [pokemon]="pokemon"
+          [pokemonSpecie]="pokemonSpecie"
+        ></app-about-details>
+        <app-base-stats-details *ngSwitchCase="'Base Stats'"
+          [pokemon]="pokemon"
+        ></app-base-stats-details>
+        <app-evolution-details *ngSwitchCase="'Evolution'"
+          [type]="pokemon.types[0].type.name"
+          [pokemonSpecie]="pokemonSpecie"
+          (id)="reloadPage($event)"
+        ></app-evolution-details>
+        <app-moves-details *ngSwitchCase="'Moves'"
+          [pokemon]="pokemon"
+        ></app-moves-details>
+      </div>
+    </main>
+  </section>
+</div>

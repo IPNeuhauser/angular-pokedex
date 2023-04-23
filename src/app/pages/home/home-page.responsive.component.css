@@ -1,0 +1,33 @@
+/* Ipads and tablets */
+@media screen and (min-width: 480px) {
+  .container-menus picture{
+    max-width: 40px;
+  }
+
+  .container-pokemons{
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 750px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main{
+    height: 100% - 100px;
+  }
+
+  footer{
+    height: 100px;
+  }
+}
+
+/* Desktops and big screens */
+@media screen and (min-width: 1024px) {
+  .container-menus picture{
+    max-width: 50px;
+  }
+
+  .container-pokemons{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 1000px;
+  }
+}

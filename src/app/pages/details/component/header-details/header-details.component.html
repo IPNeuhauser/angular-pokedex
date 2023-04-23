@@ -1,0 +1,9 @@
+<section class="header-details flex-row">
+  <section class="header-main-details">
+    <span class="name-details">{{pokemon.name}}</span>
+    <ul class="types-details">
+      <li *ngFor="let element of pokemon.types" class="type-details flex-row {{element.type.name}}">{{element.type.name}}</li>
+    </ul>
+  </section>
+  <span class="id-details flex-row">{{textId}}</span>
+</section>

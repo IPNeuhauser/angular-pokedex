@@ -1,0 +1,19 @@
+@media screen and (min-width: 480px) {
+  .links-footer{
+    font-size: 0.8rem;
+  }
+
+  .copyright-footer{
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .links-footer{
+    font-size: .8rem;
+  }
+
+  .copyright-footer{
+    font-size: .8rem;
+  }
+}

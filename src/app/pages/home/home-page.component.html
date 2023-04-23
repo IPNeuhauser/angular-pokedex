@@ -1,0 +1,44 @@
+<header>
+  <app-title></app-title>
+  <section class="container-menus">
+    <picture (click)="changeAliveMenu()">
+      <img src="../../../assets/images/menu.png" alt="icone do menu">
+    </picture>
+    <div class="container-search">
+      <app-search (isSearched)="setIsCardAlive($event)" (name)="setPokemonName($event)"></app-search>
+    </div>
+  </section>
+  <app-menu *ngIf="isMenuAlive" (click)="newPokemonList()" (isCardAlive)="setIsCardAlive($event)"></app-menu>
+</header>
+<main>
+  <div *ngIf="isCardAlive">
+    <section  class="container-pokemons">
+      <div *ngFor="let n of value;let i = index" class="container-pokemon">
+        <app-card-pokemon (click)="getId(i+offset+1)"
+          id_name="{{(i+offset+1)}}"
+        ></app-card-pokemon>
+      </div>
+    </section>
+    <app-load-more-button
+    firstPokemon="{{this.menuControl.getFirstPokemon()}}"
+    lastPokemon="{{this.menuControl.getLastPokemon()}}"
+    (sendLimit)="setLimit($event)"
+    (sendOffset)="setOffset($event)"
+    ></app-load-more-button>
+  </div>
+
+  <ng-template [ngIf]="!isCardAlive">
+    <section class="flex-row">
+      <div class="container-pokemon">
+        <app-card-pokemon
+          (click)="getName(name)"
+          id_name="{{name}}"
+        ></app-card-pokemon>
+      </div>
+    </section>
+    <app-button-back (isCardAlive)="setIsCardAlive($event)"></app-button-back>
+  </ng-template>
+</main>
+<footer>
+  <app-footer></app-footer>
+</footer>

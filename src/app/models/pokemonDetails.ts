@@ -1,0 +1,28 @@
+export type PokemonDetail = {
+  name:string,
+  id:number,
+  types:{
+    type:{
+      name:string,
+    }
+  }[],
+  abilities:{
+    ability:{
+      name:string,
+    }
+  }[],
+  height:number,
+  weight:number,
+  moves:{
+    move:{
+      name:string,
+      url:string,
+    }
+  }[],
+  stats:{
+    base_stat:number,
+    stat:{
+      name:string,
+    }
+  }[],
+}

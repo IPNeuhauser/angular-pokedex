@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'pokemonSolid';
+  src: url('./../../../../../assets/fonts/PokemonSolid.ttf') format('truetype');
+}
+
+
+.container-footer{
+  justify-content: center;
+  background-color: #F30703;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+}
+
+.links-footer{
+  width: 100%;
+  font-size: .65rem;
+  justify-content: center;
+  list-style: none;
+  font-family: 'pokemonSolid', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.links-footer > li{
+  padding: 5px;
+  color: #bfbfbf;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.70);
+}
+
+a {
+  text-decoration: none;
+  color: #bfbfbf;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.70);
+}
+
+a:hover{
+  color: white;
+}
+
+a:active{
+  position: relative;
+  top: 1px;
+}
+
+.copyright-footer{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.65rem;
+  text-align: center;
+  color: #bfbfbf;
+}

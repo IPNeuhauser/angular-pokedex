@@ -1,0 +1,39 @@
+.container-menu{
+  display: flex;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+.menu ul{
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+.menu ul li {
+  justify-content: center;
+  cursor: pointer;
+  min-width: 80px;
+  margin: 5px 5px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #F30703;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+  filter: brightness(1.2);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu ul li:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.menu ul li:active{
+  position: relative;
+  top: 1px;
+}

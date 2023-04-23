@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'roboto';
+  src: url('../../../assets/fonts/Roboto-Black.ttf') format('truetype');
+}
+
+.align-itens{
+  display: flex;
+  justify-content: center;
+}
+
+.container-details{
+  width: 100%;
+  max-width: 320px;
+  margin-top: 10px;
+  position: fixed;
+  z-index: 1;
+  filter: brightness(1.2);
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+picture{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+picture > img{
+  width: 100%;
+  max-width: 150px;
+  z-index: 1;
+}
+
+main{
+  background-color: white;
+  padding: 20px 0px;
+  border-radius: 20px;
+}
+
+.shadow-details{
+  position: relative;
+  top: -25px;
+  width: 50%;
+  height: 5px;
+  margin: auto;
+  background-color: gray;
+  color: gray;
+  border-radius: 50%;
+  transform: translateY(-80%);
+  filter: opacity(.5);
+}

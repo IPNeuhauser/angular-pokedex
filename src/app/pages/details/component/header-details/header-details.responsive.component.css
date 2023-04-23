@@ -1,0 +1,19 @@
+@media screen and (min-width: 480px) {
+  .id-details{
+    font-size: 1.2rem;
+  }
+
+  .name-details{
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .name-details{
+    padding-left: 40px;
+  }
+
+  .types-details{
+    padding-left: 40px;
+  }
+}
