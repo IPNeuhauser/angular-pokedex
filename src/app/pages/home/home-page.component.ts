@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MenuControlService } from 'src/app/services/menu-control.service';
 import { PokemonService } from 'src/app/services/pokemon.service';
 
