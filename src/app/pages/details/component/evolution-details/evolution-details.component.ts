@@ -7,7 +7,7 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 @Component({
   selector: 'app-evolution-details',
   templateUrl: './evolution-details.component.html',
-  styleUrls: ['./evolution-details.component.css', './evolution-details.responsive.component.css', '../../../../../pokemon.css']
+  styleUrls: ['./evolution-details.component.css', '../../../../../pokemon.css']
 })
 export class EvolutionDetailsComponent implements OnInit {
   @Input() pokemonSpecie: PokemonSpecie = {
