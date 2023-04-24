@@ -1,4 +1,5 @@
-@media screen and (min-width: 480px) {
+
+@media screen and (min-width: 480px) and (orientation: portrait) {
   .container-details{
     width: 100%;
     max-width: 450px;
@@ -10,9 +11,9 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (orientation: portrait) {
   .container-details{
     max-width: 450px;
   }
-
 }
+

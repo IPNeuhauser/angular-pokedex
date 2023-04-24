@@ -16,11 +16,11 @@
   font-size: 0.75rem;
   font-weight: bold;
   padding: 5px;
+  border-bottom: 1px solid black;
   cursor: pointer;
 }
 
 .menu ul li:hover{
-  border-bottom: 1px solid black;
   transform: scale(1.1);
   transition: 0.3s;
 }

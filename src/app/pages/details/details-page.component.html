@@ -1,16 +1,18 @@
 <div class="align-itens">
   <section class="container-details {{type}}" [ngClass]="animation">
-    <header>
-      <app-details-nav (animation)="startDisable($event)"></app-details-nav>
-      <app-header-details
-        [pokemon]="pokemon"
-      ></app-header-details>
-    </header>
-    <picture>
-      <img class="translate" src="{{url}}" alt="imagem do pokemon {{pokemon.name}}">
-    </picture>
-    <main>
+    <div class="landscape-container">
+      <header>
+        <app-details-nav (animation)="startDisable($event)"></app-details-nav>
+        <app-header-details
+          [pokemon]="pokemon"
+        ></app-header-details>
+      </header>
+      <picture>
+        <img class="translate" src="{{url}}" alt="imagem do pokemon {{pokemon.name}}">
+      </picture>
       <div class="shadow-details"></div>
+    </div>
+    <main>
       <app-menu-details (click)="changeMenu()"></app-menu-details>
 
       <div ngSwitch="{{menuOption}}">

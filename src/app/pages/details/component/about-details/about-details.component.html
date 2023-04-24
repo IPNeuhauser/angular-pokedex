@@ -11,7 +11,9 @@
       </li>
       <li class="flex-row">
         <span class="title">Abilities</span>
-        <span *ngFor="let element of pokemon.abilities" class="container-data">{{element.ability.name}}</span>
+        <div class="container-abilitities">
+          <span *ngFor="let element of pokemon.abilities" class="container-data">{{element.ability.name}}</span>
+        </div>
       </li>
       <h1 class="title">Breending</h1>
       <li class="flex-row">

@@ -4,7 +4,7 @@ import { PokemonDetail } from 'src/app/models/pokemonDetails';
 @Component({
   selector: 'app-header-details',
   templateUrl: './header-details.component.html',
-  styleUrls: ['./header-details.component.css', '../../../../../pokemon.css']
+  styleUrls: ['./header-details.component.css', '../../../../../pokemon.css', './header-details.responsive.component.css']
 })
 export class HeaderDetailsComponent implements AfterContentChecked{
   @Input() pokemon: PokemonDetail ={

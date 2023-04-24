@@ -32,6 +32,7 @@ export class SearchComponent {
 
   search():void{
     this.isSearched.emit(false);
-    this.name.emit(this.pokemonName)
+    this.name.emit(this.pokemonName.toLowerCase());
+    this.pokemonName = '';
   }
 }

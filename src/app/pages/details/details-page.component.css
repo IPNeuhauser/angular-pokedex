@@ -3,28 +3,95 @@
   src: url('../../../assets/fonts/Roboto-Black.ttf') format('truetype');
 }
 
-.align-itens{
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  z-index: 1;
-  top:0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.25);
+@media (orientation: portrait) {
+  .align-itens{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  .container-details{
+    width: 100%;
+    max-width: 320px;
+    margin-top: 10px;
+    position: fixed;
+    z-index: 2;
+    filter: brightness(1.2);
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+  }
+  main{
+    border-radius: 20px;
+  }
+
+  .shadow-details{
+    margin: 0px auto 2px;
+  }
+
 }
 
-.container-details{
-  width: 100%;
-  max-width: 320px;
-  margin-top: 10px;
-  position: fixed;
-  z-index: 2;
-  filter: brightness(1.2);
-  border-radius: 20px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+@media (orientation: landscape){
+  header{
+    width: 100%;
+  }
+
+  .align-itens{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  .container-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 300px;
+    margin-top: 10px;
+    position: fixed;
+    z-index: 2;
+    filter: brightness(1.2);
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+  }
+
+  .landscape-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+  }
+
+  main{
+    border-radius: 0px 20px 20px 0px;
+    width: 60%;
+    height: 100%;
+  }
+
+  .shadow-details{
+    display: none;
+  }
+
+  picture{
+    margin-top: 15px;
+  }
 }
 
+
+/* Global CSS */
 picture{
   display: flex;
   align-items: center;
@@ -41,18 +108,14 @@ picture > img{
 main{
   background-color: white;
   padding: 20px 0px;
-  border-radius: 20px;
 }
 
 .shadow-details{
-  position: relative;
-  top: -25px;
+  margin: 0px auto 2px;
   width: 50%;
   height: 5px;
-  margin: auto;
   background-color: gray;
   color: gray;
   border-radius: 50%;
-  transform: translateY(-80%);
   filter: opacity(.5);
 }

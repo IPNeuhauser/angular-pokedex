@@ -1,4 +1,4 @@
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (orientation: portrait){
   .container-baseStats{
     font-size: 1rem;
   }
@@ -8,3 +8,12 @@
   }
 }
 
+@media (orientation: landscape){
+  .container-baseStats{
+    font-size: 1rem;
+  }
+
+  .title{
+    padding-top: 11px;
+  }
+}

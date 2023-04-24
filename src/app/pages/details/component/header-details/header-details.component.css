@@ -19,7 +19,6 @@
 .id-details{
   justify-content: flex-end;
   width: 20%;
-  height: 100%;
   padding-right: 30px;
   font-family: 'pokemonSolid', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   filter: brightness(0.8);

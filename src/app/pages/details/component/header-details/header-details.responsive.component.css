@@ -1,4 +1,4 @@
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (orientation: portrait) {
   .id-details{
     font-size: 1.2rem;
   }
@@ -8,12 +8,35 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (orientation: portrait) {
   .name-details{
     padding-left: 40px;
   }
 
   .types-details{
     padding-left: 40px;
+  }
+}
+
+@media (orientation: landscape){
+  .header-details{
+    justify-content: space-evenly;
+  }
+
+  .id-details{
+    align-items: flex-start;
+    align-self: flex-start;
+    height: 60px;
+    font-size: 1rem;
+    padding-right: 10px;
+    padding-left: 20px;
+  }
+
+  .name-details{
+    font-size: 1.5rem;
+  }
+
+  .types-details{
+    font-size: 1rem;
   }
 }

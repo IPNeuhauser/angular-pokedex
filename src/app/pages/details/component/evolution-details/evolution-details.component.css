@@ -15,13 +15,12 @@
 }
 
 .container-evolution-details{
-  margin-top: 25px;
   width: 100%;
   justify-content: center;
 }
 
 .container-pokemons{
-  width: 18%;
+  width: 25%;
 }
 
 .container-arrows{
@@ -67,7 +66,8 @@ img{
 
 /* case more them 2 evolutions */
 .case3-containerFirstPokemon{
-  width: 20%;
+  width: 25%;
+  margin-left: 10px;
 }
 
 .case3-containerFirstPokemon-img{
@@ -89,14 +89,15 @@ img{
 }
 
 .case3-containerEvolutions-img{
-  width: 30%;
+  width: 40%;
   margin: 2px;
   border-radius: 50%;
 }
 
 /* case more them 8 evolutions */
 .case8-containerFirstPokemon{
-  width: 20%;
+  width: 25%;
+  margin-left: 10px;
 }
 
 .case8-containerFirstPokemon-img{
@@ -118,7 +119,15 @@ img{
 }
 
 .case8-containerEvolutions-img{
-  width: 20%;
+  width: 30%;
   margin: 2px;
   border-radius: 50%;
+}
+
+
+@media (orientation: landscape) {
+  .container-evolution-details{
+    height: 245px;
+    justify-content: center;
+  }
 }

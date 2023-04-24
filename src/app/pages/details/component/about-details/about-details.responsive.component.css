@@ -1,4 +1,4 @@
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (orientation: portrait) {
   .container-aboutDetails{
     font-size: 1rem;
   }
@@ -10,5 +10,15 @@
   .title{
     width: 30%;
     padding-left: 40px;
+  }
+}
+
+@media (orientation: landscape){
+  .container-aboutDetails{
+    font-size: 1rem;
+  }
+
+  ul > h1{
+    font-size: 1.5rem;
   }
 }
