@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeModule } from 'src/app/pages/home/home.module'
 import { DetailsModule } from 'src/app/pages/details/details.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,

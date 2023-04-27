@@ -2,27 +2,27 @@
   <article class="container-about">
     <ul>
       <li class="flex-row">
-        <span class="title">Height</span>
+        <span class="title">Altura</span>
         <span>{{pokemon.height | aboutData}} m</span>
       </li>
       <li class="flex-row">
-        <span class="title">Weight</span>
+        <span class="title">Peso</span>
         <span>{{pokemon.weight | aboutData}} kg</span>
       </li>
       <li class="flex-row">
-        <span class="title">Abilities</span>
+        <span class="title">Habilidades</span>
         <div class="container-abilitities">
           <span *ngFor="let element of pokemon.abilities" class="container-data">{{element.ability.name}}</span>
         </div>
       </li>
-      <h1 class="title">Breending</h1>
+      <h1 class="title">Reprodução</h1>
       <li class="flex-row">
-        <span class="title">Gender</span>
+        <span class="title">Gênero</span>
         <span class="container-data gender flex-row"><img src="./../../../../../assets/images/male.png" alt="Simbolo de masculino"> {{pokemonSpecie.gender_rate | gender: 'M'}}%</span>
         <span class="container-data gender flex-row"><img src="./../../../../../assets/images/female.png" alt="Simbolo de feminino"> {{pokemonSpecie.gender_rate | gender: 'F'}}%</span>
       </li>
       <li class="flex-row">
-        <span class="title">Egg group</span>
+        <span class="title">Tipo ovos</span>
         <span *ngFor="let specie of pokemonSpecie.egg_groups" class="container-data">{{specie.name}}</span>
       </li>
     </ul>

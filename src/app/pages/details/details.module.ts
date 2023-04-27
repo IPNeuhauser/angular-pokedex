@@ -8,11 +8,12 @@ import { MenuDetailsComponent } from './component/menu-details/menu-details.comp
 import { MovesDetailsComponent } from './component/moves-details/moves-details.component';
 import { DetailsNavComponent } from './component/details-nav/details-nav.component';
 import { HeaderDetailsComponent } from './component/header-details/header-details.component';
+import { EvolutionDetailsComponent } from './component/evolution-details/evolution-details.component';
 
 import { StatsNamePipe } from 'src/app/pipes/stats-name.pipe';
 import { AboutDataPipe } from 'src/app/pipes/about-data.pipe';
 import { GenderPipe } from 'src/app/pipes/gender.pipe';
-import { EvolutionDetailsComponent } from './component/evolution-details/evolution-details.component';
+import { TypePipe } from 'src/app/pipes/type.pipe';
 
 @NgModule({
   declarations: [
@@ -23,11 +24,12 @@ import { EvolutionDetailsComponent } from './component/evolution-details/evoluti
     MovesDetailsComponent,
     DetailsNavComponent,
     HeaderDetailsComponent,
-    
+    EvolutionDetailsComponent,
+
     StatsNamePipe,
     AboutDataPipe,
     GenderPipe,
-    EvolutionDetailsComponent
+    TypePipe
   ],
   imports: [
     CommonModule

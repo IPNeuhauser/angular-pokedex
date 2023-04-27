@@ -11,6 +11,7 @@
 .bg-title{
   justify-content: center;
   background-color: white;
+  padding-top: 20px;
   width: 100%;
   font-family: 'pokemonSolid', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -22,6 +23,7 @@
 }
 
 .bg-title h1 {
+  margin-top: 10px;
   color: #F30703;
   font-size: 3rem;
 }

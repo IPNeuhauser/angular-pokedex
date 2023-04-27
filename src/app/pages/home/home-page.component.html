@@ -12,6 +12,7 @@
         <div *ngFor="let n of value;let i = index" class="container-pokemon">
           <app-card-pokemon (click)="getId(i+offset+1)"
             id_name="{{(i+offset+1)}}"
+            [isType]="isTypeAlive"
           ></app-card-pokemon>
         </div>
       </section>
@@ -28,6 +29,7 @@
         <div *ngFor="let n of pokemonsName" class="container-pokemon">
           <app-card-pokemon (click)="getId(n)"
           id_name="{{n}}"
+          [isType]="isTypeAlive"
           ></app-card-pokemon>
         </div>
       </section>
@@ -41,6 +43,7 @@
         <app-card-pokemon
           (click)="getName(name)"
           id_name="{{name}}"
+          [isType]="!isTypeAlive"
         ></app-card-pokemon>
       </div>
     </section>

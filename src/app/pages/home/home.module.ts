@@ -12,6 +12,8 @@ import { TitleComponent } from './component/title/title.component';
 import { LoadMoreButtonComponent } from './component/load-more-button/load-more-button.component';
 import { ButtonBackComponent } from './component/button-back/button-back.component';
 
+import { TypeCardPipe } from 'src/app/pipes/type-card.pipe';
+
 @NgModule({
   declarations: [
     HomePageComponent,
@@ -21,7 +23,9 @@ import { ButtonBackComponent } from './component/button-back/button-back.compone
     SearchComponent,
     TitleComponent,
     LoadMoreButtonComponent,
-    ButtonBackComponent
+    ButtonBackComponent,
+
+    TypeCardPipe,
   ],
   imports: [
     CommonModule,
