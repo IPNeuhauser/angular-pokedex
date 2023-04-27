@@ -8,6 +8,7 @@ export class MenuControlService {
   private generation: string = '';
   private lastPokemon: number = 1008;
   private firstPokemon: number = 0;
+  private type: string ='';
 
   constructor() { }
 
@@ -16,6 +17,7 @@ export class MenuControlService {
       return;
     };
 
+    this.type = '';
     this.generation = gen;
 
     switch(this.generation){
@@ -81,5 +83,22 @@ export class MenuControlService {
 
   getMenuOption():string{
     return this.menuOption;
+  }
+
+  setType(type:string):void{
+    if(type == ''){
+      return;
+    }
+
+    this.generation = '';
+    this.type = type;
+  }
+
+  getType():string{
+    return this.type;
+  }
+
+  getGeneration():string{
+    return this.generation;
   }
 }

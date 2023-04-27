@@ -17,7 +17,7 @@ import { PokemonSpecie } from 'src/app/models/pokemonSpecie';
             ]
 })
 export class DetailsPageComponent implements OnInit{
-  id: number = 0;
+  id: number | string = 0;
   menuOption: string = 'About';
   type:string = '';
   url:string = '';

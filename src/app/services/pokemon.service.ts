@@ -8,31 +8,27 @@ import { PokemonDetail } from '../models/pokemonDetails';
 import { Move } from '../models/move';
 import { PokemonSpecie } from '../models/pokemonSpecie';
 import { PokemonEvolution } from '../models/pokemonEvolution';
+import { PokemonTypes } from '../models/pokemonTypes';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PokemonService {
-  private pokeData: PokemonCard | any;
-  private pokeDetails: PokemonDetail | any;
-  private move: Move | any;
-  private pokemonSpecie: PokemonSpecie | any;
-  private pokemonEvolution: PokemonEvolution | any;
   private isAliveDetails:boolean = false;
   private urlAPI:string = '';
   private specieUrl: string = '';
-  private id:number = 1;
+  private id:number | string = 1;
 
   constructor(private http:HttpClient) {
     this.urlAPI = environment.pokeApi;
     this.specieUrl = environment.specieUrl;
   }
 
-  setId(id:number):void{
+  setId(id:number | string):void{
     this.id = id;
   }
 
-  getId():number{
+  getId():number | string{
     return this.id;
   }
 
@@ -45,27 +41,38 @@ export class PokemonService {
   }
 
   getPokemon(nameOrId:string):Observable<PokemonCard>{
-    this.pokeData = this.http.get<PokemonCard>(`${this.urlAPI}${nameOrId}`);
-    return this.pokeData;
+    let pokeData: PokemonCard | any;
+    pokeData = this.http.get<PokemonCard>(`${this.urlAPI}${nameOrId}`);
+    return pokeData;
   }
 
-  getPokemonDetails(id:number):Observable<PokemonDetail>{
-    this.pokeDetails = this.http.get<PokemonDetail>(`${this.urlAPI}${id}`);
-    return this.pokeDetails;
+  getPokemonDetails(id:number | string):Observable<PokemonDetail>{
+    let pokeDetails: PokemonDetail | any;
+    pokeDetails = this.http.get<PokemonDetail>(`${this.urlAPI}${id}`);
+    return pokeDetails;
   }
 
   getMove(url:string):Observable<Move>{
-    this.move = this.http.get<Move>(url);
-    return this.move;
+    let move: Move | any;
+    move = this.http.get<Move>(url);
+    return move;
   }
 
   getPokemonSpecie(id:string | number):Observable<PokemonSpecie>{
-    this.pokemonSpecie = this.http.get<PokemonSpecie>(`${this.specieUrl}${id}`);
-    return this.pokemonSpecie;
+    let pokemonSpecie: PokemonSpecie | any;
+    pokemonSpecie = this.http.get<PokemonSpecie>(`${this.specieUrl}${id}`);
+    return pokemonSpecie;
   }
 
   getEvolutionChain(url:string): Observable<PokemonEvolution>{
-    this.pokemonEvolution = this.http.get<PokemonEvolution>(url);
-    return this.pokemonEvolution;
+    let pokemonEvolution: PokemonEvolution | any;
+    pokemonEvolution = this.http.get<PokemonEvolution>(url);
+    return pokemonEvolution;
+  }
+
+  getPokemonType(type:string):Observable<any>{
+    let pokemonType: PokemonTypes | any;
+    pokemonType = this.http.get<PokemonTypes>(`${environment.typeUrl}${type}`);
+    return pokemonType;
   }
 }

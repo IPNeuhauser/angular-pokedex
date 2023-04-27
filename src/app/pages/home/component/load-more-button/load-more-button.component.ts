@@ -25,7 +25,7 @@ export class LoadMoreButtonComponent implements OnChanges{
 
   nextPage():void{
     let rest = Math.round(+this.limit % 12);
-    
+
     if(this.offset + rest == +this.limit || this.offset >= +this.limit){
       this.pag = 12;
       this.offset = +this.firstPokemon;
@@ -40,10 +40,11 @@ export class LoadMoreButtonComponent implements OnChanges{
     }else {
       this.offset += 12;
       this.pag = 12;
+
+      this.sendLimit.emit(this.pag);
+      this.sendOffset.emit(this.offset);
     }
 
-    this.sendLimit.emit(this.pag);
-    this.sendOffset.emit(this.offset);
   }
 
   previousPage():void{
@@ -55,7 +56,7 @@ export class LoadMoreButtonComponent implements OnChanges{
     }else if(this.offset - 12 < +this.firstPokemon){
       if(rest == 0){
         this.pag = 12;
-        this.offset = +this.limit -12
+        this.offset = +this.limit -12;
       } else {
         this.pag = rest;
         this.offset = +this.limit - rest;

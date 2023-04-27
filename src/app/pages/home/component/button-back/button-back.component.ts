@@ -7,8 +7,13 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class ButtonBackComponent {
   @Output() isCardAlive = new EventEmitter<boolean>
+  @Output() isTypeAlive = new EventEmitter<boolean>
 
   killCard(){
     this.isCardAlive.emit(true);
+  }
+
+  killTypes(){
+    this.isTypeAlive.emit(false);
   }
 }

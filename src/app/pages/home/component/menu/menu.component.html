@@ -1,15 +1,41 @@
 <section class="container-menu">
   <nav class="menu">
-    <ul class="flex-row">
-      <li class="flex-row" (click)="getGeneration('first')">1ª gen</li>
-      <li class="flex-row" (click)="getGeneration('second')">2ª gen</li>
-      <li class="flex-row" (click)="getGeneration('third')">3ª gen</li>
-      <li class="flex-row" (click)="getGeneration('fourth')">4ª gen</li>
-      <li class="flex-row" (click)="getGeneration('fifth')">5ª gen</li>
-      <li class="flex-row" (click)="getGeneration('sixth')">6ª gen</li>
-      <li class="flex-row" (click)="getGeneration('seventh')">7ª gen</li>
-      <li class="flex-row" (click)="getGeneration('eighth')">8ª gen</li>
-      <li class="flex-row" (click)="getGeneration('nineth')">9ª gen</li>
+    <ul class="first-menu flex-row">
+      <li>Gerações
+        <ul class="second-menu flex-column ">
+          <li (click)="getGeneration('first')">1ª geração</li>
+          <li (click)="getGeneration('second')">2ª geração</li>
+          <li (click)="getGeneration('third')">3ª geração</li>
+          <li (click)="getGeneration('fourth')">4ª geração</li>
+          <li (click)="getGeneration('fifth')">5ª geração</li>
+          <li (click)="getGeneration('sixth')">6ª geração</li>
+          <li (click)="getGeneration('seventh')">7ª geração</li>
+          <li (click)="getGeneration('eighth')">8ª geração</li>
+          <li (click)="getGeneration('nineth')">9ª geração</li>
+        </ul>
+      </li>
+      <li>Tipos
+        <ul class="second-menu flex-column">
+          <li (click)="getType('steel')">Aço</li>
+          <li (click)="getType('water')">Água</li>
+          <li (click)="getType('dragon')">Dragão</li>
+          <li (click)="getType('electric')">Elétrico</li>
+          <li (click)="getType('fairy')">Fada</li>
+          <li (click)="getType('ghost')">Fantasma</li>
+          <li (click)="getType('fire')">Fogo</li>
+          <li (click)="getType('ice')">Gelo</li>
+          <li (click)="getType('bug')">Inseto</li>
+          <li (click)="getType('fighting')">Lutador</li>
+          <li (click)="getType('normal')">Normal</li>
+          <li (click)="getType('rock')">Pedra</li>
+          <li (click)="getType('grass')">Planta</li>
+          <li (click)="getType('psychic')">Psíquico</li>
+          <li (click)="getType('dark')">Sombrio</li>
+          <li (click)="getType('ground')">Terra</li>
+          <li (click)="getType('poison')">Venenoso</li>
+          <li (click)="getType('flying')">Voador</li>
+        </ul>
+      </li>
     </ul>
   </nav>
 </section>

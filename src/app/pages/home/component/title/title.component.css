@@ -6,15 +6,12 @@
 
 .container-title{
   width: 100%;
-  margin-bottom: 15px;
 }
 
 .bg-title{
   justify-content: center;
   background-color: white;
   width: 100%;
-  border-radius: 0px 0px 5px 5px;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.8);
   font-family: 'pokemonSolid', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 

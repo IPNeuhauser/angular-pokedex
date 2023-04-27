@@ -27,8 +27,6 @@ export class CardPokemonComponent implements OnInit, OnChanges{
 
   ngOnInit():void{
 
-    (this.id_name.length == 1) ? this.textId = '#00' + this.id_name :
-      (this.id_name.length == 2) ? this.textId = '#0' + this.id_name : this.textId = '#' + this.id_name;
 
     this.pokemonService.getPokemon(this.id_name).subscribe(
       {
@@ -38,7 +36,9 @@ export class CardPokemonComponent implements OnInit, OnChanges{
             id: resposta.id,
             types: resposta.types,
             type: resposta.types[0].type.name,
-          }
+          };
+          (this.pokemon.id == 1) ? this.textId = '#00' + this.pokemon.id :
+            (this.pokemon.id == 2) ? this.textId = '#0' + this.pokemon.id : this.textId = '#' + this.pokemon.id;
         },
         error: (error) => console.log(error)
       }

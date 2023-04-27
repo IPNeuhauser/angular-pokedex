@@ -8,30 +8,8 @@ header{
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  padding: 0px 10px;
-}
-
-.container-menus picture{
-  max-width: 30px;
-  cursor: pointer;
-}
-
-.container-menus picture img{
-  width: 100%;
-}
-
-.container-menus picture:hover{
-  transform: scale(1.05);
-  transition: 0.2s;
-}
-
-.container-menus picture:active{
-  position: relative;
-  top: 1px;
-}
-
-.container-search{
-  width: 80%;
+  background-color: white;
+  margin-bottom: 10px;
 }
 
 main {

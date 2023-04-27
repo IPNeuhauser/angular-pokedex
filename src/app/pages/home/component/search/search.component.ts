@@ -1,8 +1,4 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { PokemonCard } from 'src/app/models/pokemonCard';
-
-import { PokemonService } from 'src/app/services/pokemon.service';
-
 
 @Component({
   selector: 'app-search',

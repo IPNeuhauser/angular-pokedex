@@ -1,39 +1,103 @@
 .container-menu{
   display: flex;
-  margin-bottom: 10px;
   margin-left: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: capitalize;
 }
 
-.menu ul{
-  flex-wrap: wrap;
+.first-menu{
   justify-content: flex-start;
   list-style: none;
+  gap: 5px;
 }
 
-.menu ul li {
-  justify-content: center;
+.first-menu > li {
+  align-self: top;
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px 0px 0px 10px;
   cursor: pointer;
-  min-width: 80px;
-  margin: 5px 5px;
-  padding: 5px 10px;
-  border-radius: 10px;
-  background-color: #F30703;
+}
+
+.first-menu > li::after{
+  content: '';
+  display: block;
+  border: 1px solid black;
+  margin-top: 2px;
+  transition: all 0.3s;
+}
+
+.first-menu > li:hover {
+  background-color: black;
   color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 0.75rem;
-  text-transform: capitalize;
-  filter: brightness(1.2);
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
 }
 
-.menu ul li:hover{
-  transform: scale(1.1);
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-  font-size: 0.9rem;
-  transition: 0.3s;
+.first-menu > li:hover::after {
+  content: '';
+  display: block;
+  border: 1px solid white;
+  margin-top: 2px;
+  transition: all 0.3s;
+
 }
 
-.menu ul li:active{
+.first-menu > li:hover > .second-menu {
+  display: block;
+  visibility: visible;
+  transition: all 0.3s;
+}
+
+.second-menu{
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  list-style: none;
+  background-color: black;
+  border-radius: 0px 10px 10px 10px;
+  z-index: 1;
+}
+
+.second-menu::child{
+  margin-bottom: 5px;
+}
+
+.second-menu > li {
+  display: block;
+  text-align: center;
+  width: 110px;
+  padding: 10px;
+}
+
+.second-menu > li:active {
   position: relative;
   top: 1px;
+}
+
+.second-menu > li:hover{
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.second-menu > li::after{
+  content: '';
+  display: block;
+  border: 1px solid white;
+  width: 50%;
+  margin: 5px auto 0px;
+}
+
+.second-menu > li:hover::after{
+  content: '';
+  display: block;
+  border: 1px solid black;
+  margin-top: 2px;
 }

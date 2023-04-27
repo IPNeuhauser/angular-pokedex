@@ -1,30 +1,38 @@
 <header>
   <app-title></app-title>
   <section class="container-menus">
-    <picture (click)="changeAliveMenu()">
-      <img src="../../../assets/images/menu.png" alt="icone do menu">
-    </picture>
-    <div class="container-search">
-      <app-search (isSearched)="setIsCardAlive($event)" (name)="setPokemonName($event)"></app-search>
-    </div>
+    <app-menu (click)="newPokemonList()" (isCardAlive)="setIsCardAlive($event)"></app-menu>
   </section>
-  <app-menu *ngIf="isMenuAlive" (click)="newPokemonList()" (isCardAlive)="setIsCardAlive($event)"></app-menu>
+  <app-search (isSearched)="setIsCardAlive($event)" (name)="setPokemonName($event)"></app-search>
 </header>
 <main>
   <div *ngIf="isCardAlive">
-    <section  class="container-pokemons">
-      <div *ngFor="let n of value;let i = index" class="container-pokemon">
-        <app-card-pokemon (click)="getId(i+offset+1)"
-          id_name="{{(i+offset+1)}}"
-        ></app-card-pokemon>
-      </div>
-    </section>
-    <app-load-more-button
-    firstPokemon="{{this.menuControl.getFirstPokemon()}}"
-    lastPokemon="{{this.menuControl.getLastPokemon()}}"
-    (sendLimit)="setLimit($event)"
-    (sendOffset)="setOffset($event)"
-    ></app-load-more-button>
+    <div *ngIf="!isTypeAlive">
+      <section  class="container-pokemons">
+        <div *ngFor="let n of value;let i = index" class="container-pokemon">
+          <app-card-pokemon (click)="getId(i+offset+1)"
+            id_name="{{(i+offset+1)}}"
+          ></app-card-pokemon>
+        </div>
+      </section>
+      <app-load-more-button
+      firstPokemon="{{this.menuControl.getFirstPokemon()}}"
+      lastPokemon="{{this.menuControl.getLastPokemon()}}"
+      (sendLimit)="setLimit($event)"
+      (sendOffset)="setOffset($event)"
+      ></app-load-more-button>
+    </div>
+
+    <div *ngIf="isTypeAlive">
+      <section  class="container-pokemons">
+        <div *ngFor="let n of pokemonsName" class="container-pokemon">
+          <app-card-pokemon (click)="getId(n)"
+          id_name="{{n}}"
+          ></app-card-pokemon>
+        </div>
+      </section>
+      <!-- <app-button-back (isTypeAlive)="setIsTypeAlive($event)"></app-button-back> -->
+    </div>
   </div>
 
   <ng-template [ngIf]="!isCardAlive">

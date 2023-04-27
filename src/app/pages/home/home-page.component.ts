@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component} from '@angular/core';
+import { PokemonTypes } from 'src/app/models/pokemonTypes';
 import { MenuControlService } from 'src/app/services/menu-control.service';
 import { PokemonService } from 'src/app/services/pokemon.service';
 
@@ -8,33 +9,59 @@ import { PokemonService } from 'src/app/services/pokemon.service';
   styleUrls: ['./home-page.component.css', './home-page.responsive.component.css', '../../../pokemon.css']
 })
 export class HomePageComponent {
-  isMenuAlive:boolean = false;
   isCardAlive: boolean = true;
+  isTypeAlive = false
   name: string = '';
   limit:number = 12;
   offset: number = 0;
-  value: number[] = [];
+  value: any[] = [];
+  pokemonsName: string[] = [];
 
   constructor(private pokemonService: PokemonService, public menuControl: MenuControlService){
     this.value = Array(this.limit);
   }
 
-  changeAliveMenu():void{
-    (this.isMenuAlive) ? this.isMenuAlive = false : this.isMenuAlive = true;
-  }
-
   newPokemonList():void{
-    this.value = []
-    this.offset = this.menuControl.getFirstPokemon();
-    this.limit = 12;
-    this.reload();
+    let type = this.menuControl.getType();
+    let gen = this.menuControl.getGeneration();
+    this.value = [];
+    this.pokemonsName = [];
+
+    if(type != ''){
+      this.getPokemonsType(type);
+    } else if (gen != ''){
+      this.limit = 12;
+      this.offset = this.menuControl.getFirstPokemon();
+      this.reload();
+      this.isTypeAlive = false;
+    } else {
+      return;
+    }
   }
 
   reload():void{
     this.value = Array(this.limit);
   }
 
-  getId(id:number):void{
+  getPokemonsType(type:string):void{
+    let pokemonTypes: PokemonTypes;
+    this.pokemonService.getPokemonType(type).subscribe(
+      {
+        next: (res) => {
+          pokemonTypes = {
+            pokemon: res.pokemon
+          }
+          pokemonTypes.pokemon.forEach((pokemon) => {
+            this.pokemonsName.push(pokemon.pokemon.name);
+          });
+          this.isTypeAlive = true;
+        },
+        error: (error) => console.log(error)
+      }
+    );
+  }
+
+  getId(id:number | string):void{
     this.pokemonService.setIsAliveDetails(true);
     this.pokemonService.setId(id);
   }
@@ -55,6 +82,12 @@ export class HomePageComponent {
 
   setIsCardAlive(isSearched:boolean): void{
     this.isCardAlive = isSearched
+  }
+
+  setIsTypeAlive(isTypeAlive:boolean): void{
+    this.isTypeAlive = isTypeAlive
+    this.menuControl.setType('');
+    this.newPokemonList();
   }
 
   setPokemonName(name:string): void{
